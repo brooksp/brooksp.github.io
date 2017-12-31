@@ -7,11 +7,11 @@ var browserSync = require('browser-sync');
 var reload = browserSync.reload;
 
 gulp.task('less', function () {
-  return gulp.src('./app/less/**/*.less')
+  return gulp.src('./less/**/*.less')
     .pipe(less({
       paths: [ path.join(__dirname, 'less', 'includes') ]
     }))
-    .pipe(gulp.dest('./app/css'))
+    .pipe(gulp.dest('./css'))
     .pipe(reload({ stream:true }));
 });
 
@@ -19,9 +19,9 @@ gulp.task('less', function () {
 gulp.task('serve', ['less'], function() {
   browserSync({
     server: {
-      baseDir: 'app'
+      baseDir: '.'
     }
   });
 
-  gulp.watch(['app/*.html', 'app/less/*.less', 'app/scripts/*.js'], ['less', reload]);
+  gulp.watch(['*.html', 'less/*.less', 'scripts/*.js'], ['less', reload]);
 });
