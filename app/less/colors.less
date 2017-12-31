@@ -1,0 +1,41 @@
+@color-primary: #025ab5;
+@color-secondary: #0081ff;
+@color-tertiary: #ffd100;
+
+@color-primary--alt1: #044c57;
+@color-secondary--alt1: #0094ac;
+@color-tertiary--alt1: #ffbe00;
+
+@color-primary--alt2: #00414e; //#243f44 less saturated
+@color-secondary--alt2: #43d295;
+@color-tertiary--alt2: #ffe647;
+
+@color-primary: @color-primary--alt2;
+@color-secondary: @color-secondary--alt2;
+@color-tertiary: @color-tertiary--alt2;
+
+.color-primary {
+    color: @color-primary;
+}
+
+.color-secondary {
+    color: @color-secondary;
+}
+
+.color-tertiary {
+    color: @color-tertiary;
+}
+
+svg {
+    .color-primary {
+        fill: @color-primary;
+    }
+
+    .color-secondary {
+        fill: @color-secondary;
+    }
+
+    .color-tertiary {
+        fill: @color-tertiary;
+    }
+}

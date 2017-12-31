@@ -1,0 +1,14 @@
+<?xml-stylesheet type="text/css" href="../css/index.css" ?>
+<svg class="logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 48">
+    <title>BP</title>
+    <g class="logo__b">
+        <circle class="logo__b__top color-tertiary" cx="14" cy="12" r="12"/>
+        <circle class="logo__b__bottom color-secondary" cx="15" cy="33" r="15"/>
+        <rect class="logo__b__side color-primary" width="15" height="48"/>
+    </g>
+    <g class="logo__p">
+        <circle class="logo__p__period color-primary" cx="59" cy="43" r="5"/>
+        <circle class="logo__p__top color-tertiary" cx="49" cy="15" r="15"/>
+        <rect class="logo__p__side color-secondary" x="34" width="15" height="48"/>
+    </g>
+</svg>

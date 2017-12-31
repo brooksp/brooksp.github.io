@@ -1,0 +1,18 @@
+.color-primary {
+  color: #00414e;
+}
+.color-secondary {
+  color: #43d295;
+}
+.color-tertiary {
+  color: #ffe647;
+}
+svg .color-primary {
+  fill: #00414e;
+}
+svg .color-secondary {
+  fill: #43d295;
+}
+svg .color-tertiary {
+  fill: #ffe647;
+}
