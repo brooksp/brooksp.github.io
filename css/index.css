@@ -1,37 +1,354 @@
+.color-primary {
+  color: #333F5D;
+}
+.color-primary-light {
+  color: #333F5D;
+}
+.color-secondary {
+  color: #2D6EB1;
+}
+.color-tertiary {
+  color: #F8D155;
+}
+svg .color-primary {
+  fill: #333F5D;
+}
+svg .color-primary-light {
+  fill: #333F5D;
+}
+svg .color-secondary {
+  fill: #2D6EB1;
+}
+svg .color-tertiary {
+  fill: #F8D155;
+}
 html,
 body {
   margin: 0;
   height: 100%;
 }
 body {
-  font-family: 'Asap', sans-serif;
-  font-size: 12px;
+  font-family: 'Graphik';
+  font-weight: 400;
+  color: #333F5D;
+  background-color: #C0D1E0;
+}
+.nomargin {
+  margin: 0;
+}
+.fullheight {
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+.contain {
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1440px) {
+  .contain {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .contain {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .contain {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
 }
 .logo {
-  font-size: 72px;
+  width: 4rem;
+  height: 3rem;
+}
+.me {
+  display: flex;
+  flex-direction: row;
+}
+@media screen and (max-width: 550px) {
+  .me {
+    flex-direction: column;
+  }
+}
+.me .me__info {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  margin-left: 20px;
+}
+@media screen and (max-width: 550px) {
+  .me .me__info {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+}
+.me .me__info h1 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0;
+}
+@media screen and (max-width: 550px) {
+  .me .me__info h1 {
+    line-height: 1.5rem;
+  }
+}
+.me .me__info h2 {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: #333F5D;
+  margin: 0;
+}
+@media screen and (max-width: 550px) {
+  .me .me__info h2 {
+    line-height: 1.5rem;
+  }
+}
+.intro {
+  padding-top: 12%;
+  padding-bottom: 12%;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+@media screen and (max-width: 1440px) {
+  .intro {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .intro {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .intro {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+.intro .intro__about {
+  margin-top: 6rem;
+}
+@media screen and (max-width: 550px) {
+  .intro .intro__about {
+    margin-top: 3rem;
+  }
+}
+.intro .intro__about h1 {
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 4rem;
+  margin: 0;
+}
+@media screen and (max-width: 550px) {
+  .intro .intro__about h1 {
+    font-size: 1.75rem;
+    line-height: 2.4rem;
+  }
+}
+.intro .intro__about h2 {
+  font-weight: 300;
+  font-size: 1.75rem;
+  line-height: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 0;
+  color: #333F5D;
+}
+@media screen and (max-width: 550px) {
+  .intro .intro__about h2 {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    line-height: 2.4rem;
+  }
+}
+.intro h2 {
+  font-weight: 400;
+}
+.section {
+  padding-bottom: 6rem;
+  display: flex;
+  max-width: 1024px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media screen and (max-width: 1440px) {
+  .section {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+@media screen and (max-width: 550px) {
+  .section {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .section {
+    flex-direction: column;
+  }
+}
+.section .section__heading {
+  margin: 0;
+  margin-right: 4rem;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 1rem;
+  width: 12rem;
+  flex: 0 0 auto;
+  text-align: right;
+  color: #2D6EB1;
+}
+@media screen and (max-width: 550px) {
+  .section .section__heading {
+    text-align: left;
+    margin-left: -1rem;
+  }
+}
+.section .section__content {
+  max-width: 600px;
+}
+@media screen and (max-width: 550px) {
+  .section .section__content {
+    margin-top: 1.5rem;
+  }
+}
+.section .section__content p {
+  font-size: 1rem;
+  line-height: 2rem;
+  font-weight: 300;
+  color: #333F5D;
+}
+.section .section__content p:first-child {
+  margin-top: 0;
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 100;
+  src: url(../assets/fonts/Graphik/Graphik-Thin.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 100;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-ThinItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 200;
+  src: url(../assets/fonts/Graphik/Graphik-Extralight.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 200;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-ExtralightItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 300;
+  src: url(../assets/fonts/Graphik/Graphik-Light.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 300;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-LightItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 400;
+  src: url(../assets/fonts/Graphik/Graphik-Regular.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 400;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-RegularItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 500;
+  src: url(../assets/fonts/Graphik/Graphik-Medium.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 500;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-MediumItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 600;
+  src: url(../assets/fonts/Graphik/Graphik-Semibold.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 600;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-SemiboldItalic.woff2);
+}
+@font-face {
+  font-family: Graphik;
+  font-weight: 700;
+  src: url(../assets/fonts/Graphik/Graphik-Bold.woff2);
+}
+@font-face {
+  font-family: Graphik;
   font-weight: 700;
   font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-BoldItalic.woff2);
 }
-.logo:before {
-  content: 'B';
-  color: white;
-  -webkit-text-stroke: 1px black;
+@font-face {
+  font-family: Graphik;
+  font-weight: 800;
+  src: url(../assets/fonts/Graphik/Graphik-Black.woff2);
 }
-.color-primary {
-  color: #00414e;
+@font-face {
+  font-family: Graphik;
+  font-weight: 800;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-BlackItalic.woff2);
 }
-.color-secondary {
-  color: #43d295;
+@font-face {
+  font-family: Graphik;
+  font-weight: 900;
+  src: url(../assets/fonts/Graphik/Graphik-Super.woff2);
 }
-.color-tertiary {
-  color: #ffe647;
+@font-face {
+  font-family: Graphik;
+  font-weight: 900;
+  font-style: italic;
+  src: url(../assets/fonts/Graphik/Graphik-SuperItalic.woff2);
 }
-svg .color-primary {
-  fill: #00414e;
+@font-face {
+  font-family: GT Pressura Mono;
+  font-weight: 300;
+  src: url(../assets/fonts/GTPressuraMono/GTPressuraMono-Light.woff);
 }
-svg .color-secondary {
-  fill: #43d295;
+@font-face {
+  font-family: GT Pressura Mono;
+  font-weight: 400;
+  src: url(../assets/fonts/GTPressuraMono/GTPressuraMono-Regular.woff2);
 }
-svg .color-tertiary {
-  fill: #ffe647;
+@font-face {
+  font-family: GT Pressura Mono;
+  font-weight: 500;
+  src: url(../assets/fonts/GTPressuraMono/GTPressura-Bold.woff2);
 }

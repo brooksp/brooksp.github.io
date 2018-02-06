@@ -1,21 +1,69 @@
-@color-primary: #025ab5;
-@color-secondary: #0081ff;
-@color-tertiary: #ffd100;
+@color-primary--1: #025ab5;
+@color-secondary--1: #0081ff;
+@color-tertiary--1: #ffd100;
+@color-text--1: #025ab5;
 
 @color-primary--alt1: #044c57;
 @color-secondary--alt1: #0094ac;
 @color-tertiary--alt1: #ffbe00;
+@color-text--alt1: #044c57;
 
 @color-primary--alt2: #00414e; //#243f44 less saturated
-@color-secondary--alt2: #43d295;
-@color-tertiary--alt2: #ffe647;
+@color-secondary--alt2: #43d28e;
+@color-tertiary--alt2: #ffe95e;
+@color-text--alt2: #00414e;
 
-@color-primary: @color-primary--alt2;
-@color-secondary: @color-secondary--alt2;
-@color-tertiary: @color-tertiary--alt2;
+@color-primary--alt4: #1f3e44;
+
+@color-primary--alt3: #333F5D;
+@color-secondary--alt3: #DC4940; // #E8343A;
+@color-tertiary--alt3: #F8D155; // #F4BE42;
+@color-quaternary--alt3: #E79385;
+@color-quinary--alt3: #2D6EB1;
+@color-senary--alt3: #C0D1E0;
+@color-text--alt3: @color-primary--alt3;
+
+@color-primary--alt4: #1C2432;
+@color-secondary--alt4: #806fce;
+@color-tertiary--alt4: #D6D8D3;
+@color-text--alt4: @color-primary--alt4;
+
+@color-primary--bloo: #007bff; // #38383e;
+@color-secondary--bloo: #0cb3e3;
+@color-tertiary--bloo: #17e5ca;
+@color-text--bloo: #38383e;
+
+@color-primary--bon: #332B67;
+@color-secondary--bon: #ED692C; //#f16220;
+@color-tertiary--bon: #d2bc45; //#dec63f;
+@color-text--bon: desaturate(@color-primary--bon, 0%);
+
+@color-primary--soft: #333F5D;
+@color-secondary--soft: #2D6EB1;
+@color-tertiary--soft: #F8D155;
+@color-quaternary--soft: #C0D1E0;
+@color-text--soft: #333F5D;
+
+@color-scheme: 'soft';
+
+@color-primary-scheme: 'color-primary--@{color-scheme}';
+@color-secondary-scheme: 'color-secondary--@{color-scheme}';
+@color-tertiary-scheme: 'color-tertiary--@{color-scheme}';
+@color-text-scheme: 'color-text--@{color-scheme}';
+
+@color-primary: @@color-primary-scheme;
+@color-primary-light: @@color-primary-scheme;
+// @color-primary-light: desaturate(lighten(@color-primary, 20%), 25%);
+@color-secondary: @@color-secondary-scheme;
+@color-tertiary: @@color-tertiary-scheme;
+@color-text: @@color-text-scheme;
 
 .color-primary {
     color: @color-primary;
+}
+
+.color-primary-light {
+    color: @color-primary-light;
 }
 
 .color-secondary {
@@ -29,6 +77,10 @@
 svg {
     .color-primary {
         fill: @color-primary;
+    }
+
+    .color-primary-light {
+        fill: @color-primary-light;
     }
 
     .color-secondary {

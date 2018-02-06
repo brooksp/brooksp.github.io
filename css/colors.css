@@ -1,18 +1,24 @@
 .color-primary {
-  color: #00414e;
+  color: #333F5D;
+}
+.color-primary-light {
+  color: #333F5D;
 }
 .color-secondary {
-  color: #43d295;
+  color: #2D6EB1;
 }
 .color-tertiary {
-  color: #ffe647;
+  color: #F8D155;
 }
 svg .color-primary {
-  fill: #00414e;
+  fill: #333F5D;
+}
+svg .color-primary-light {
+  fill: #333F5D;
 }
 svg .color-secondary {
-  fill: #43d295;
+  fill: #2D6EB1;
 }
 svg .color-tertiary {
-  fill: #ffe647;
+  fill: #F8D155;
 }
