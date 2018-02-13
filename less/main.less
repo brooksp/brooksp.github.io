@@ -235,7 +235,19 @@ body {
     }
 }
 
+@keyframes emphasize {
+    0% { box-shadow: 0; }
+    15% { box-shadow: 0px 3px @color-tertiary; }
+    30% { box-shadow: 0; }
+}
+
 .pop {
+    b {
+        animation-name: emphasize;
+        animation-duration: 6s;
+        animation-iteration-count: infinite;
+    }
+
     .pop__content {
         display: inline-block;
         height: 0px;
@@ -258,6 +270,30 @@ body {
             background-size: 28px 18px;
             background-position: 8px 7px;
             padding-left: 42px;
+            padding-right: 8px;
+        }
+
+        &.aufc {
+            background-image: url('../assets/AUFC.svg');
+            background-size: 22px 22px;
+            background-position: 8px 5px;
+            padding-left: 36px;
+            padding-right: 8px;
+        }
+
+        &.thfc {
+            background-image: url('../assets/THFC.svg');
+            background-size: 14px 22px;
+            background-position: 8px 5px;
+            padding-left: 28px;
+            padding-right: 8px;
+        }
+
+        &.braves {
+            background-image: url('../assets/Braves.svg');
+            background-size: 22px 22px;
+            background-position: 8px 5px;
+            padding-left: 36px;
             padding-right: 8px;
         }
     }
