@@ -274,14 +274,47 @@ body b {
 .skills .section__content .skills__category ul li {
   line-height: 2rem;
 }
+@media screen and (max-width: 550px) {
+  .skills .section__content .skills__category {
+    margin-top: 1rem;
+  }
+}
+.experience .section__content {
+  width: 100%;
+}
+.job {
+  line-height: 2rem;
+}
+.job .job__top {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.job .job__top .job__company {
+  font-size: 1rem;
+  margin: 0;
+}
+.job .job__top .job__when {
+  font-family: 'GT Pressura Mono';
+  font-weight: 300;
+  font-size: .9rem;
+}
+.job .job__title {
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 0;
+}
+.job:not(:last-child) {
+  margin-bottom: 1rem;
+}
 @keyframes emphasize {
   0% {
     box-shadow: 0;
   }
-  15% {
+  20% {
     box-shadow: 0px 3px #b1ab2d;
   }
-  30% {
+  80% {
     box-shadow: 0;
   }
 }
@@ -289,6 +322,9 @@ body b {
   animation-name: emphasize;
   animation-duration: 6s;
   animation-iteration-count: infinite;
+}
+.pop.popped b {
+  animation: none;
 }
 .pop .pop__content {
   display: inline-block;
@@ -301,33 +337,38 @@ body b {
   background-repeat: no-repeat;
   background-position: left;
 }
-.pop:hover .pop__content {
+.pop:hover .pop__content,
+.pop:focus .pop__content {
   margin-left: 2px;
   font-size: inherit;
   height: 2rem;
 }
-.pop:hover .pop__content.uga {
+.pop:hover .pop__content.uga,
+.pop:focus .pop__content.uga {
   background-image: url('../assets/UGA.svg');
   background-size: 28px 18px;
   background-position: 8px 7px;
   padding-left: 42px;
   padding-right: 8px;
 }
-.pop:hover .pop__content.aufc {
+.pop:hover .pop__content.aufc,
+.pop:focus .pop__content.aufc {
   background-image: url('../assets/AUFC.svg');
   background-size: 22px 22px;
   background-position: 8px 5px;
   padding-left: 36px;
   padding-right: 8px;
 }
-.pop:hover .pop__content.thfc {
+.pop:hover .pop__content.thfc,
+.pop:focus .pop__content.thfc {
   background-image: url('../assets/THFC.svg');
   background-size: 14px 22px;
   background-position: 8px 5px;
   padding-left: 28px;
   padding-right: 8px;
 }
-.pop:hover .pop__content.braves {
+.pop:hover .pop__content.braves,
+.pop:focus .pop__content.braves {
   background-image: url('../assets/Braves.svg');
   background-size: 22px 22px;
   background-position: 8px 5px;

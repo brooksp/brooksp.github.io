@@ -231,14 +231,55 @@ body {
                     line-height: 2rem;
                 }
             }
+
+            @media @mobile {
+                margin-top: 1rem;
+            }
         }
+    }
+}
+
+.experience {
+    .section__content {
+        width: 100%;
+    }
+}
+
+.job {
+    line-height: 2rem;
+
+    .job__top {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        .job__company {
+            font-size: 1rem;
+            .nomargin;
+        }
+
+        .job__when {
+            font-family: 'GT Pressura Mono';
+            font-weight: 300;
+            font-size: .9rem;
+        }
+    }
+
+    .job__title {
+        font-size: 1rem;
+        font-weight: 400;
+        .nomargin;
+    }
+
+    &:not(:last-child) {
+        margin-bottom: 1rem;
     }
 }
 
 @keyframes emphasize {
     0% { box-shadow: 0; }
-    15% { box-shadow: 0px 3px @color-tertiary; }
-    30% { box-shadow: 0; }
+    20% { box-shadow: 0px 3px @color-tertiary; }
+    80% { box-shadow: 0; }
 }
 
 .pop {
@@ -246,6 +287,10 @@ body {
         animation-name: emphasize;
         animation-duration: 6s;
         animation-iteration-count: infinite;
+    }
+
+    &.popped b {
+        animation: none;
     }
 
     .pop__content {
@@ -260,7 +305,8 @@ body {
         background-position: left;
     }
 
-    &:hover .pop__content {
+    &:hover .pop__content,
+    &:focus .pop__content {
         margin-left: 2px;
         font-size: inherit;
         height: 2rem;
