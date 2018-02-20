@@ -22,11 +22,13 @@
 @color-quinary--alt3: #2D6EB1;
 @color-senary--alt3: #C0D1E0;
 @color-text--alt3: @color-primary--alt3;
+@color-background--alt3: #d0caca;
 
 @color-primary--alt4: #1C2432;
 @color-secondary--alt4: #806fce;
 @color-tertiary--alt4: #D6D8D3;
 @color-text--alt4: @color-primary--alt4;
+@color-background--alt4: #fff;
 
 @color-primary--bloo: #007bff; // #38383e;
 @color-secondary--bloo: #0cb3e3;
@@ -37,33 +39,36 @@
 @color-secondary--bon: #ED692C; //#f16220;
 @color-tertiary--bon: #d2bc45; //#dec63f;
 @color-text--bon: desaturate(@color-primary--bon, 0%);
+@color-background--bon: #fff;
 
-@color-primary--soft: #333F5D;
+@color-primary--soft: #1a2c50; //#333F5D;
 @color-secondary--soft: #2D6EB1;
 @color-tertiary--soft: #b1ab2d; //#b19f2d;
-@color-quaternary--soft: #C0D1E0;
-@color-text--soft: #333F5D;
+@color-background--soft: #ccd8ea; //#C0D1E0;
+@color-text--soft: #1a2c50;
 
-@color-scheme: 'soft';
+@color-scheme: 'alt3';
 
 @color-primary-scheme: 'color-primary--@{color-scheme}';
 @color-secondary-scheme: 'color-secondary--@{color-scheme}';
 @color-tertiary-scheme: 'color-tertiary--@{color-scheme}';
 @color-text-scheme: 'color-text--@{color-scheme}';
+@color-background-scheme: 'color-background--@{color-scheme}';
 
 @color-primary: @@color-primary-scheme;
-@color-primary-light: @@color-primary-scheme;
-// @color-primary-light: desaturate(lighten(@color-primary, 20%), 25%);
+@color-primary--light: @@color-primary-scheme;
+// @color-primary--light: desaturate(lighten(@color-primary, 20%), 25%);
 @color-secondary: @@color-secondary-scheme;
 @color-tertiary: @@color-tertiary-scheme;
 @color-text: @@color-text-scheme;
+@color-background: @@color-background-scheme;
 
 .color-primary {
     color: @color-primary;
 }
 
 .color-primary-light {
-    color: @color-primary-light;
+    color: @color-primary--light;
 }
 
 .color-secondary {
@@ -80,7 +85,7 @@ svg {
     }
 
     .color-primary-light {
-        fill: @color-primary-light;
+        fill: @color-primary--light;
     }
 
     .color-secondary {

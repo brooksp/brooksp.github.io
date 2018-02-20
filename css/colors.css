@@ -5,10 +5,10 @@
   color: #333F5D;
 }
 .color-secondary {
-  color: #2D6EB1;
+  color: #DC4940;
 }
 .color-tertiary {
-  color: #b1ab2d;
+  color: #F8D155;
 }
 svg .color-primary {
   fill: #333F5D;
@@ -17,8 +17,8 @@ svg .color-primary-light {
   fill: #333F5D;
 }
 svg .color-secondary {
-  fill: #2D6EB1;
+  fill: #DC4940;
 }
 svg .color-tertiary {
-  fill: #b1ab2d;
+  fill: #F8D155;
 }

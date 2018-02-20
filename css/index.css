@@ -5,10 +5,10 @@
   color: #333F5D;
 }
 .color-secondary {
-  color: #2D6EB1;
+  color: #DC4940;
 }
 .color-tertiary {
-  color: #b1ab2d;
+  color: #F8D155;
 }
 svg .color-primary {
   fill: #333F5D;
@@ -17,10 +17,10 @@ svg .color-primary-light {
   fill: #333F5D;
 }
 svg .color-secondary {
-  fill: #2D6EB1;
+  fill: #DC4940;
 }
 svg .color-tertiary {
-  fill: #b1ab2d;
+  fill: #F8D155;
 }
 html,
 body {
@@ -31,10 +31,10 @@ body {
   font-family: 'Graphik';
   font-weight: 400;
   color: #333F5D;
-  background-color: #C0D1E0;
+  background-color: #d0caca;
 }
 body ::selection {
-  background: #C0D1E0;
+  background: #F8D155;
 }
 body h1,
 body h2,
@@ -225,7 +225,7 @@ body b {
   width: 12rem;
   flex: 0 0 auto;
   text-align: right;
-  color: #2D6EB1;
+  color: #DC4940;
 }
 @media screen and (max-width: 1024px) {
   .section .section__heading {
@@ -312,10 +312,7 @@ body b {
     box-shadow: 0;
   }
   20% {
-    box-shadow: 0px 3px #b1ab2d;
-  }
-  80% {
-    box-shadow: 0;
+    box-shadow: 0px 3px #F8D155;
   }
 }
 .pop b {
@@ -332,7 +329,7 @@ body b {
   font-size: 0;
   transition: height 0.3s, width 0.2s, margin-left 0.2s, font-size 0.2s ease-out;
   border-radius: 4px;
-  background-color: white;
+  background-color: #fff;
   background-size: auto;
   background-repeat: no-repeat;
   background-position: left;
