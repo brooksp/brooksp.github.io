@@ -55,8 +55,8 @@
 @color-text-scheme: 'color-text--@{color-scheme}';
 @color-background-scheme: 'color-background--@{color-scheme}';
 
-@color-primary: @@color-primary-scheme;
-@color-primary--light: @@color-primary-scheme;
+@color-primary: saturate(@@color-primary-scheme, 10%);
+@color-primary--light: desaturate(lighten(@@color-primary-scheme, 10%), 15%);
 // @color-primary--light: desaturate(lighten(@color-primary, 20%), 25%);
 @color-secondary: @@color-secondary-scheme;
 @color-tertiary: @@color-tertiary-scheme;

@@ -95,7 +95,6 @@ body {
 
         h2 {
             font-size: 1.25rem;
-            .color-primary-light;
             .nomargin;
 
             @media @mobile {
@@ -139,7 +138,6 @@ body {
             line-height: 3rem;
             margin-top: 2rem;
             margin-bottom: 0;
-            .color-primary-light;
 
             @media @mobile {
                 margin-top: 1.5rem;
@@ -195,7 +193,6 @@ body {
         p {
             font-size: 1rem;
             line-height: 2rem;
-            .color-primary-light;
 
             &:first-child {
                 margin-top: 0;
@@ -259,8 +256,6 @@ body {
         }
 
         .job__when {
-            font-family: 'GT Pressura Mono';
-            font-weight: 300;
             font-size: .9rem;
         }
     }
@@ -276,21 +271,106 @@ body {
     }
 }
 
+.footer {
+    line-height: 2rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 3rem 150px 3rem 150px;
+
+    @media @desktop {
+        padding: 3rem 50px;
+    }
+
+    @media @mobile {
+        flex-direction: column;
+    }
+
+
+    .footer__copyright {
+        @media @desktop {
+            width: 160px;
+        }
+
+        @media @mobile {
+            width: auto;
+            font-size: .9rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+    }
+
+    .footer__links {
+        flex: 1;
+        display: flex;
+        justify-content: flex-end;
+
+        @media @mobile {
+            justify-content: center;
+        }
+
+        .link {
+            text-decoration: none;
+            color: @color-secondary;
+            margin: auto 0 auto 50px;
+
+            @media @mobile {
+                margin: auto 0 auto 20px;
+                &:first-child {
+                    margin: auto 0 auto 0;
+                }
+            }
+
+            .link__text {
+                font-weight: 600;
+                letter-spacing: 2px;
+
+                @media @mobile {
+                    display: none;
+                }
+            }
+
+            .link__icon {
+                display: none;
+                fill: @color-secondary;
+
+                @media @mobile {
+                    display: block;
+                }
+            }
+
+            &:hover .link__text {
+                box-shadow: 0px 3px @color-tertiary;
+            }
+
+            .pop__content {
+                color: @color-text;
+
+                @media @mobile {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
 @keyframes emphasize {
     0% { box-shadow: 0; }
-    20% { box-shadow: 0px 3px @color-tertiary; }
+    30% { box-shadow: 0px 3px @color-tertiary; }
+    100% { box-shadow: 0; }
 }
 
 .pop {
-    b {
+    .pop__trigger {
         animation-name: emphasize;
-        animation-duration: 6s;
+        animation-duration: 4s;
         animation-iteration-count: infinite;
     }
 
-    &.popped b {
+    &.popped .pop__trigger,
+    &.pop--no-animation .pop__trigger, {
         animation: none;
     }
+
 
     .pop__content {
         display: inline-block;
@@ -302,6 +382,11 @@ body {
         background-size: auto;
         background-repeat: no-repeat;
         background-position: left;
+
+        &.pop__content--under {
+            position: absolute;
+            display: block;
+        }
     }
 
     &:hover .pop__content,
@@ -309,6 +394,12 @@ body {
         margin-left: 2px;
         font-size: inherit;
         height: 2rem;
+        padding-left: 8px;
+        padding-right: 8px;
+
+        &.pop__content--under {
+            margin: 0;
+        }
 
         &.uga {
             background-image: url('../assets/UGA.svg');
