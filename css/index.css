@@ -307,7 +307,7 @@ body b {
   line-height: 2rem;
   display: flex;
   justify-content: space-between;
-  padding: 3rem 150px 3rem 150px;
+  padding: 6rem 150px 3rem 150px;
 }
 @media screen and (max-width: 1024px) {
   .footer {
