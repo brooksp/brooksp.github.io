@@ -104,6 +104,21 @@ body {
     }
 }
 
+@keyframes slideDown50 {
+    from { transform: translateY(-50px) }
+    to { transform: translateY(0) }
+}
+
+@keyframes slideDown100 {
+    from { transform: translateY(-100px); }
+    to { transform: translateY(0); }
+}
+
+@keyframes slideUp50 {
+    from { transform: translateY(50px); }
+    to { transform: translateY(0); }
+}
+
 .intro {
     padding-top: 10%;
     padding-bottom: 20%;
@@ -112,6 +127,11 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+
+    .me {
+        animation-name: slideDown50;
+        animation-duration: 1s;
+    }
 
     .intro__about {
         margin-top: 6rem;
@@ -125,6 +145,8 @@ body {
             font-weight: 600;
             line-height: 4rem;
             margin: 0;
+            animation-name: slideDown100;
+            animation-duration: 1s;
 
             @media @mobile {
                 font-size: 1.75rem;
@@ -138,6 +160,8 @@ body {
             line-height: 3rem;
             margin-top: 2rem;
             margin-bottom: 0;
+            animation-name: slideUp50;
+            animation-duration: 1s;
 
             @media @mobile {
                 margin-top: 1.5rem;

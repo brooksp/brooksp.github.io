@@ -115,6 +115,30 @@ body b {
     line-height: 1.5rem;
   }
 }
+@keyframes slideDown50 {
+  from {
+    transform: translateY(-50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideDown100 {
+  from {
+    transform: translateY(-100px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes slideUp50 {
+  from {
+    transform: translateY(50px);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
 .intro {
   padding-top: 10%;
   padding-bottom: 20%;
@@ -145,6 +169,10 @@ body b {
     margin-right: 50px;
   }
 }
+.intro .me {
+  animation-name: slideDown50;
+  animation-duration: 1s;
+}
 .intro .intro__about {
   margin-top: 6rem;
 }
@@ -158,6 +186,8 @@ body b {
   font-weight: 600;
   line-height: 4rem;
   margin: 0;
+  animation-name: slideDown100;
+  animation-duration: 1s;
 }
 @media screen and (max-width: 550px) {
   .intro .intro__about h1 {
@@ -171,6 +201,8 @@ body b {
   line-height: 3rem;
   margin-top: 2rem;
   margin-bottom: 0;
+  animation-name: slideUp50;
+  animation-duration: 1s;
 }
 @media screen and (max-width: 550px) {
   .intro .intro__about h2 {
