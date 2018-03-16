@@ -1,27 +1,40 @@
 'use strict';
 
-var gulp = require('gulp');
-var less = require('gulp-less');
-var path = require('path');
-var browserSync = require('browser-sync');
-var reload = browserSync.reload;
+const gulp = require('gulp');
+const less = require('gulp-less');
+const path = require('path');
+const browserSync = require('browser-sync');
+const uglify = require('gulp-uglify');
+const pump = require('pump');
+const cleanCSS = require('gulp-clean-css');
 
-gulp.task('less', function () {
-  return gulp.src('./less/**/*.less')
-    .pipe(less({
-      paths: [ path.join(__dirname, 'less', 'includes') ]
-    }))
-    .pipe(gulp.dest('./css'))
-    .pipe(reload({ stream:true }));
+const reload = browserSync.reload;
+
+gulp.task('less', function() {
+    return gulp.src('./less/**/*.less')
+        .pipe(less({
+            paths: [ path.join(__dirname, 'less', 'includes') ]
+        }))
+        .pipe(cleanCSS({ compatibility: 'ie8' }))
+        .pipe(gulp.dest('./css'))
+        .pipe(reload({ stream:true }));
+});
+
+gulp.task('uglify', function(cb) {
+    pump([
+        gulp.src('scripts/*.js'),
+        uglify(),
+        gulp.dest('js')
+    ], cb);
 });
 
 // watch files for changes and reload
-gulp.task('serve', ['less'], function() {
-  browserSync({
-    server: {
-      baseDir: '.'
-    }
-  });
+gulp.task('serve', ['less', 'uglify'], function() {
+    browserSync({
+        server: {
+            baseDir: '.'
+        }
+    });
 
-  gulp.watch(['*.html', 'less/*.less', 'scripts/*.js'], ['less', reload]);
+    gulp.watch(['*.html', 'less/*.less', 'scripts/*.js'], ['less', 'uglify', reload]);
 });
