@@ -28,15 +28,18 @@ gulp.task("uglify", function(cb) {
 });
 
 // watch files for changes and reload
-gulp.task("serve", ["less", "uglify"], function() {
-  browserSync({
-    server: {
-      baseDir: "."
-    }
-  });
+gulp.task(
+  "serve",
+  gulp.series("less", "uglify", function() {
+    browserSync({
+      server: {
+        baseDir: "."
+      }
+    });
 
-  gulp.watch(
-    ["*.html", "less/*.less", "scripts/*.js"],
-    ["less", "uglify", reload]
-  );
-});
+    gulp.watch(
+      ["*.html", "less/*.less", "scripts/*.js"],
+      gulp.series("less", "uglify", reload)
+    );
+  })
+);
