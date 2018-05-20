@@ -1,19 +1,19 @@
-@color-primary--bp: #333F5D;
-@color-secondary--bp: #DC4940; // #E8343A;
-@color-tertiary--bp: #F8D155; // #F4BE42;
-@color-quaternary--bp: #E79385;
-@color-quinary--bp: #2D6EB1;
-@color-senary--bp: #C0D1E0;
+@color-primary--bp: #333f5d;
+@color-secondary--bp: #dc4940; // #E8343A;
+@color-tertiary--bp: #f8d155; // #F4BE42;
+@color-quaternary--bp: #e79385;
+@color-quinary--bp: #2d6eb1;
+@color-senary--bp: #c0d1e0;
 @color-text--bp: @color-primary--bp;
 @color-background--bp: white; //#d0caca;
 
-@color-scheme: 'bp';
+@color-scheme: "bp";
 
-@color-primary-scheme: 'color-primary--@{color-scheme}';
-@color-secondary-scheme: 'color-secondary--@{color-scheme}';
-@color-tertiary-scheme: 'color-tertiary--@{color-scheme}';
-@color-text-scheme: 'color-text--@{color-scheme}';
-@color-background-scheme: 'color-background--@{color-scheme}';
+@color-primary-scheme: "color-primary--@{color-scheme}";
+@color-secondary-scheme: "color-secondary--@{color-scheme}";
+@color-tertiary-scheme: "color-tertiary--@{color-scheme}";
+@color-text-scheme: "color-text--@{color-scheme}";
+@color-background-scheme: "color-background--@{color-scheme}";
 
 @color-primary: saturate(@@color-primary-scheme, 10%);
 @color-primary--light: desaturate(lighten(@@color-primary-scheme, 10%), 15%);
@@ -25,35 +25,35 @@
 @color-light-gray: #efefef;
 
 .color-primary {
-    color: @color-primary;
+  color: @color-primary;
 }
 
 .color-primary-light {
-    color: @color-primary--light;
+  color: @color-primary--light;
 }
 
 .color-secondary {
-    color: @color-secondary;
+  color: @color-secondary;
 }
 
 .color-tertiary {
-    color: @color-tertiary;
+  color: @color-tertiary;
 }
 
 svg {
-    .color-primary {
-        fill: @color-primary;
-    }
+  .color-primary {
+    fill: @color-primary;
+  }
 
-    .color-primary-light {
-        fill: @color-primary--light;
-    }
+  .color-primary-light {
+    fill: @color-primary--light;
+  }
 
-    .color-secondary {
-        fill: @color-secondary;
-    }
+  .color-secondary {
+    fill: @color-secondary;
+  }
 
-    .color-tertiary {
-        fill: @color-tertiary;
-    }
+  .color-tertiary {
+    fill: @color-tertiary;
+  }
 }
