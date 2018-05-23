@@ -19,4 +19,17 @@ $(function() {
   $(".pop").focus(function() {
     $(this).addClass("popped");
   });
+
+  window.sr = ScrollReveal({
+    reset: false,
+    duration: 500,
+    scale: 1,
+    viewFactor: 0.3,
+    easing: "cubic-bezier(0.7,0,0.3,1)"
+  });
+
+  sr.reveal(".background");
+  sr.reveal(".skills");
+  sr.reveal(".experience");
+  sr.reveal(".projects");
 });
