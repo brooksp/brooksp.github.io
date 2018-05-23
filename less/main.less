@@ -98,6 +98,7 @@ body {
 
     h2 {
       font-size: 1.25rem;
+      opacity: 0.8;
       .nomargin;
 
       @media @mobile {
@@ -177,6 +178,7 @@ body {
       margin-bottom: 0;
       animation-name: slideUp50;
       animation-duration: 1s;
+      opacity: 0.8;
 
       @media @mobile {
         margin-top: 1.5rem;
@@ -307,11 +309,35 @@ body {
   .job__title {
     font-size: 1rem;
     font-weight: 400;
+    opacity: 0.8;
     .nomargin;
   }
 
   &:not(:last-child) {
     margin-bottom: 1rem;
+  }
+}
+
+.project {
+  .project__preview {
+    width: 100%;
+    max-width: 600px;
+  }
+
+  .project__info {
+    margin-top: 1rem;
+
+    .project__title {
+      font-size: 1.1rem;
+      line-height: 2rem;
+      .nomargin;
+    }
+
+    .project__description {
+      font-size: 1rem;
+      opacity: 0.8;
+      .nomargin;
+    }
   }
 }
 
@@ -408,7 +434,6 @@ body {
   color: @color-primary;
 
   font-weight: 600;
-  letter-spacing: 2px;
   transition: all 0.2s ease-out;
   padding: 3px;
 
