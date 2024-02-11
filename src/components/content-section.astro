@@ -1,0 +1,9 @@
+---
+const { className } = Astro.props;
+---
+
+<section
+  class={`max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-3xl mx-auto peer transition-transform ${className}`}
+>
+  <slot />
+</section>
